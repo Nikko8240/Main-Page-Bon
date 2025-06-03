@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>BonChon Style Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* HERO BANNER ON TOP */
+        .hero-banner {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            background-image: url('https://i.imgur.com/RB3z5RD.jpeg');
+            background-size: cover;
+            background-position: center;
+            /* Removed filter to keep text bright */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden; /* contain overlay */
+        }
+
+        /* Dark overlay behind text */
+        .hero-banner::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.6);
+            z-index: 1;
+        }
+
+        .hero-banner-text {
+            position: relative; /* stack above overlay */
+            color: white;
+            font-size: 3em;
+            font-weight: bold;
+            text-align: center;
+            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
+            padding: 0 20px;
+            max-width: 90%;
+            z-index: 2;
+        }
+
+        /* HEADER */
+        header {
+            background-color: white;
+            padding: 10px 20px;
+            border-bottom: 2px solid #d71e28;
+        }
+        .preview {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        cursor: pointer;
+        }
+
+        .icon {
+        cursor: pointer;
+        width: 100%;
+        max-width: 60px;
+        height: auto;
+        }
+
+        @media (max-width: 970px) {
+            header nav ul{
+            display: none;
+            }
+        }
+        nav {
+            max-width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        nav img {
+            height: 50px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li a {
+            color: #d71e28;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav a.order-button {
+            background-color: #d71e28;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* SECTION 1 - OUR STORY */
+        .story {
+            display: flex;
+            background-color: #d71e28;
+            color: white;
+            padding: 40px 20px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .story-text {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .story img {
+            flex: 1;
+            max-width: 100%;
+            height: auto;
+            padding: 20px;
+        }
+
+        .story button {
+            background-color: white;
+            color: #d71e28;
+            padding: 10px 20px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        /* SECTION 2 - MENU */
+        .menu-section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .menu-section h2 {
+            font-size: 32px;
+            color: black;
+        }
+
+        .menu-section h2 span {
+            color: #d71e28;
+        }
+
+        .menu-section p {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .menu-items {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .menu-items img {
+            width: 300px;
+            border-radius: 10px;
+        }
+
+        /* SECTION 3 - FOOTER */
+        footer {
+            background-color: #d71e28;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        footer input[type="email"] {
+            padding: 10px;
+            width: 300px;
+            border: none;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+
+        footer button {
+            padding: 10px 20px;
+            background-color: white;
+            color: #d71e28;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .footer-links {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links div {
+            text-align: left;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin: 5px 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .story {
+                flex-direction: column;
+                padding: 20px 10px;
+            }
+            .story img {
+                padding: 0;
+                margin-top: 20px;
+            }
+            .menu-items {
+                flex-direction: column;
+                gap: 10px;
+            }
+            nav ul {
+                gap: 10px;
+                font-size: 14px;
+            }
+            nav img {
+                height: 40px;
+            }
+            .hero-banner {
+                height: 250px;
+            }
+            .hero-banner-text {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HERO BANNER -->
+    <section class="hero-banner">
+        <div class="hero-banner-text">DELICIOUS KOREAN FRIED CHICKEN</div>
+    </section>
+
+    <!-- HEADER -->
+    <header>
+        <nav>
+            <a href="file:///E:/FEU/Perhaps%20Bonchon.html"><img  class="icon" src="https://i.imgur.com/THXI6ih.png" alt="BonChon Logo" /></a>
+            <ul>
+                <li><a href="file:///E:/FEU/Menu.html">MENU</a></li>
+                <li><a href="#">OUR STORY</a></li>
+                <li><a href="#">BRANCHES</a></li>
+                <li><a href="#">PROMOS</a></li>
+                <li><a href="#">FRANCHISE</a></li>
+                <li><a href="#">CAREER</a></li>
+                <li><a href="#">CONTACT US</a></li>
+            </ul>
+            <a href="" class="order-button">ORDER NOW!</a>
+        </nav>
+    </header>
+
+    <!-- SECTION 1 -->
+    <section class="story">
+        <div class="story-text">
+            <h1>THE STORY OF BONCHON'S GLOBAL EXPANSION</h1>
+            <p>
+                Discover the delicious journey of BonChon! From its humble beginnings to worldwide
+                success, founder Jinduk Seh’s passion for Korean comfort food led him to craft the
+                ultimate crispy, tender, and flavorful Korean Fried Chicken. Aside from the delicious
+                Korean meals, BonChon brings people together to celebrate culture and tradition with
+                every delectable bite.
+            </p>
+            <button>OUR STORY</button>
+        </div>
+        <a href="file:///E:/FEU/Menu.html"><img class="preview" src="https://i.imgur.com/RB3z5RD.jpeg" alt="Bonchon Chicken" /></a>
+    </section>
+
+    <!-- SECTION 2 -->
+    <section class="menu-section">
+        <h2>
+            DIVE INTO YOUR <span>FAVORITE</span> KOREAN DISHES
+        </h2>
+        <p>Satisfy your cravings with BonChon's irresistibly delicious menu</p>
+        <div class="menu-items">
+            <a href="file:///E:/FEU/Menu.html"> <img
+                class="preview"
+                src="https://i.imgur.com/HTxDHcJ.jpeg"
+                alt="Dish 1"
+            /></a>
+            <a href="file:///E:/FEU/Menu.html"><img
+                class="preview"
+                src="https://i.imgur.com/yuzPHb4.jpeg"
+                alt="Dish 2"
+            /></a>
+            <a href="file:///E:/FEU/Menu.html"><img
+                class="preview"
+                src="https://i.imgur.com/VMIOabg.jpeg"
+                alt="Dish 3"
+            /></a>
+        </div>
+    </section>
+
+    <!-- SECTION 3 -->
+    <footer>
+        <h2>GET FRESH AND HOT NEWS STRAIGHT TO YOUR INBOX</h2>
+        <input type="email" placeholder="Email Address" />
+        <button>SUBSCRIBE</button>
+
+        <div class="footer-links">
+            <div>
+                <strong>MENU</strong>
+                <a href="#">Menu</a>
+                <a href="#">Branches</a>
+                <a href="#">Franchise</a>
+                <a href="#">Order Now</a>
+            </div>
+            <div>
+                <strong>COMPANY</strong>
+                <a href="#">Our Story</a>
+                <a href="#">Promos</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Careers</a>
+            </div>
+            <div>
+                <strong>LEGAL</strong>
+                <a href="#">Terms of Use</a>
+                <a href="#">Legal</a>
+            </div>
+        </div>
+        <p style="margin-top: 30px;">
+            Copyright © 2025 BonChon Chicken Philippines. All rights reserved.
+        </p>
+    </footer>
+</body>
+</html>
