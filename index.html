@@ -11,6 +11,7 @@
 
         /* HERO BANNER ON TOP */
         .hero-banner {
+            text-decoration: none;
             position: relative;
             width: 100%;
             height: 400px;
@@ -22,9 +23,6 @@
             justify-content: center;
             align-items: center;
             overflow: hidden; /* contain overlay */
-        }
-        .hero-banner a {
-            text-decoration: none;
         }
 
         /* Dark overlay behind text */
@@ -95,6 +93,11 @@
         }
 
         nav ul li a {
+            color: #333333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
             color: #d71e28;
             text-decoration: none;
             font-weight: bold;
@@ -104,13 +107,25 @@
             display: inline;
         }
 
-        nav a.order-button {
-            background-color: #d71e28;
-            color: white;
-            padding: 10px 15px;
-            text-decoration: none;
-            font-weight: bold;
+        .order-button:hover {
+        background-color: #ec3c3c;
+        color: #fff;
+        transition: background-color 0.4s ease;
         }
+        .order-container{
+        width: auto;
+        object-fit: contain;
+        }
+        .order-button{
+        display: inline-block;
+        margin: 10px;
+        text-decoration: none;
+        border: #d71e28;
+        background: #d71e28;
+        padding: 15px 20px;
+        color: #ffffff;
+        font-weight: 850;
+}
 
         /* SECTION 1 - OUR STORY */
         .story {
@@ -179,23 +194,23 @@
         }
 
         /* SECTION 3 - FOOTER */
-        footer {
-            background-color: #ff0000;
-            text-align: center;
-            color: #fff;
-            font-size: 20px;
-            font-weight: 900;
-            padding: 50px;
-       }
-       footer fo{
-            height: 50px;
+footer {
+    background-color: #d71e28;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 900;
+    padding: 50px;
+}
+footer fo{
+    height: 50px;
     
-       }
-       footer fo a{
-            text-decoration: none;
-            color: white;
-            padding: 15px;
-      }
+}
+footer fo a{
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+}
 
         /* Responsive */
         @media (max-width: 768px) {
@@ -248,7 +263,9 @@
                 <li><a href="#">CAREER</a></li>
                 <li><a href="#">CONTACT US</a></li>
             </ul>
+            <div class="order-container">
             <a href="https://nikko8240.github.io/Menu-Bon/" class="order-button">ORDER NOW!</a>
+            </div>
         </nav>
     </header>
 
